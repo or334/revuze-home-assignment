@@ -1,0 +1,20 @@
+.main-container {
+  max-width: 190px;
+  padding: 15px;
+  border: 1px solid black;
+  h2 {
+    margin-bottom: 0px;
+  }
+  mat-list-item {
+    cursor: pointer;
+    color: black
+  }
+  mat-divider {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(0,0,0,.12);
+  }
+  a {
+    color: black;
+  }
+}

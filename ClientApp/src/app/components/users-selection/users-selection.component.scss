@@ -1,0 +1,12 @@
+.main-container {
+  max-width: 500px;
+  border: 1px solid black;
+  span {
+    color: black;
+  }
+  mat-divider {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(0,0,0,.12);
+  }
+}

@@ -1,0 +1,19 @@
+<div class="main-container" fxLayout="column">
+  <h3>Welcome to Revuze users database!</h3>
+  <p>Please click in one of buttons to show the users, by their month of birth, sorted by last name:</p>
+  <ul>
+    <li>First Quarter: Januray - March</li>
+    <li>Second Quarter: April - June</li>
+    <li>Third Quarter: July - September</li>
+    <li>Fourth Quarter: October - December</li>
+  </ul>
+  <p>When the app first loads, it automatically shows the First Quarter users!</p>
+  <p>To find a user, use the panel in the table. If the result is succeed, it'll show the details of the user.</p>
+  <p>If not, the view will remain empty, OR it'll keep showing the details of the previous user.<br>Please note that the search IS NOT case sensitive.</p>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <button mat-raised-button color="primary" (click)="getUsersByFirstQuarter()">First Quarter</button>
+    <button mat-raised-button color="primary" (click)="getUsersBySecondQuarter()">Second Quarter</button>
+    <button mat-raised-button color="primary" (click)="getUsersByThirdQuarter()">Third Quarter</button>
+    <button mat-raised-button color="primary" (click)="getUsersByFourthQuarter()">Fourth Quarter</button>
+  </div>
+</div>
