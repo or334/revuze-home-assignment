@@ -15,14 +15,10 @@ namespace revuze_exam.Repositories
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        public Task<User> GetUser()
-        {
-            throw new NotImplementedException();
-        }
 
-        public IEnumerable<User> GetUsers()
+        public async Task<IEnumerable<User>> GetUsersAsync()
         {
-            string data = _context.GetUsersData();
+            string data = await _context.GetUsersDataAsync().ConfigureAwait(false);
             var users = JsonConvert.DeserializeObject<List<User>>(data);
             return users;
         }

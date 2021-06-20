@@ -8,7 +8,6 @@ namespace revuze_exam.Repositories
 {
     public interface IUserRepository
     {
-        IEnumerable<User> GetUsers();
-        Task<User> GetUser();
+        Task<IEnumerable<User>> GetUsersAsync();
     }
 }

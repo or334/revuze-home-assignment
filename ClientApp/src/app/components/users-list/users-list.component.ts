@@ -25,7 +25,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
 
   // Get the users list when the component is loading.
   private async _initUsers() {
-    (await this._usersService.getUsers(EQuarter.first))
+    this._usersService.getUsers(EQuarter.first)
     .subscribe( data => {
       this.users= data.users;
     })

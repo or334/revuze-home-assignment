@@ -26,8 +26,8 @@ constructor(private _http: HttpClient) { }
     Get users methods - makes a HTTP requests to get the
     list of the users, and returns them.
   */
-  async getUsers(quarter: EQuarter) {
-    return await this._http.get<IUsersList>(`${USERS_API}?quarter=${quarter}`).pipe(
+  getUsers(quarter: EQuarter) {
+    return this._http.get<IUsersList>(`${USERS_API}?quarter=${quarter}`).pipe(
       retry(3), catchError(this.handleError<IUsersList>('getUsers')));
   }
 

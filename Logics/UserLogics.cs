@@ -13,11 +13,11 @@ namespace revuze_exam.Logics
         private readonly IUserRepository _repository;
         public UserLogics(IUserRepository repository)
         {
-            _repository = repository;
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
-        public UsersList GetUsersListByQuarter(EQuarter quarter)
+        public async Task<UsersList> GetUsersListByQuarterAsync(EQuarter quarter)
         {
-            var users = _repository.GetUsers();
+            var users = await _repository.GetUsersAsync().ConfigureAwait(false);
             return SortUsersByQuarter(users, quarter);
         }
 

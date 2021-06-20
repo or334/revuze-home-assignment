@@ -10,6 +10,6 @@ namespace revuze_exam.Logics
 {
     public interface IUserLogics
     {
-        UsersList GetUsersListByQuarter(EQuarter quarter);
+        Task<UsersList> GetUsersListByQuarterAsync(EQuarter quarter);
     }
 }

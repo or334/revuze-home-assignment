@@ -7,6 +7,6 @@ namespace revuze_exam.Data
 {
     public interface IUserContext
     {
-        string GetUsersData();
+        Task<string> GetUsersDataAsync();
     }
 }
